@@ -1,0 +1,481 @@
+/* ==========================================
+   RESET & VARIÁVEIS (Estilo Neo-Brutalista)
+   ========================================== */
+:root {
+    --bg-color: #f4f4f0;
+    /* Bege claro clássico brutalista */
+    --primary: #FFDE4D;
+    /* Amarelo vibrante */
+    --secondary: #38bdf8;
+    /* Azul neon rígido */
+    --accent: #ff4a5a;
+    /* Vermelho coral para destaques */
+    --text-color: #1a1a1a;
+    /* Preto puro para contraste */
+    --border-stroke: 4px solid #1a1a1a;
+    /* Bordas grossas marcantes */
+    --neo-shadow: 6px 6px 0px 0px #1a1a1a;
+    /* Sombra sólida sem desfoque */
+    --neo-shadow-hover: 2px 2px 0px 0px #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ==========================================
+   NAVEGAÇÃO (Nav com bordas flutuantes)
+   ========================================== */
+nav {
+    background-color: #ffffff;
+    border-bottom: var(--border-stroke);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    transition: all 0.15s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary);
+    border: 2px solid var(--text-color);
+    box-shadow: 2px 2px 0px #1a1a1a;
+}
+
+/* ==========================================
+   HERO SECTION (Apresentação Principal)
+   ========================================== */
+#hero {
+    padding: 4rem 0;
+    background-color: var(--primary);
+    border-bottom: var(--border-stroke);
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.content-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border: var(--border-stroke);
+    box-shadow: var(--neo-shadow);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+/* Substitui os degradês por blocos de cor sólidos com marcação */
+.text-gradient {
+    background: #fff;
+    color: #000;
+    padding: 0.2rem 0.6rem;
+    border: var(--border-stroke);
+    display: inline-block;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Botões Brutalistas */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 1rem 1.8rem;
+    border: var(--border-stroke);
+    box-shadow: var(--neo-shadow);
+    transition: all 0.15s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+.btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: var(--neo-shadow-hover);
+}
+
+/* Espaço da imagem estilo sticker antigo */
+.hero-image-slot {
+    background-color: #fff;
+    border: var(--border-stroke);
+    box-shadow: var(--neo-shadow);
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fallback-shape {
+    width: 80%;
+    height: 80%;
+    background-color: var(--accent);
+    border: var(--border-stroke);
+    transform: rotate(-3deg);
+}
+
+/* ==========================================
+   SOBRE MIM & TÍTULOS
+   ========================================== */
+#sobre {
+    background-color: #fff;
+    border-bottom: var(--border-stroke);
+    padding: 4rem 0;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: var(--border-stroke);
+    box-shadow: var(--neo-shadow);
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    background: var(--bg-color);
+    padding: 2rem;
+    border: var(--border-stroke);
+    box-shadow: var(--neo-shadow);
+}
+
+/* ==========================================
+   PROJETOS (Cartões estilo adesivo/card duro)
+   ========================================== */
+#projetos {
+    padding: 4rem 0;
+}
+
+.project-category {
+    margin-bottom: 4rem;
+}
+
+/* Substitutos sólidos dos degradês das categorias */
+.text-gradient-blue {
+    background: var(--secondary);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border: var(--border-stroke);
+}
+
+.text-gradient-purple {
+    background: #a855f7;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border: var(--border-stroke);
+}
+
+.text-gradient-green {
+    background: #22c55e;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border: var(--border-stroke);
+}
+
+/* Grid e Cards Brutalistas */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border: var(--border-stroke);
+    box-shadow: var(--neo-shadow);
+    transition: all 0.15s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translate(3px, 3px);
+    box-shadow: var(--neo-shadow-hover);
+}
+
+.project-image {
+    height: 180px;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--border-stroke);
+    background-color: var(--primary);
+}
+
+/* Cores das imagens baseadas na seção */
+.project-image.backend {
+    background-color: #a855f7;
+}
+
+.project-image.database {
+    background-color: #22c55e;
+}
+
+.project-image.cybersecurity {
+    background-color: var(--accent);
+}
+
+.project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.project-info p {
+    font-weight: 500;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Tags de Tecnologias */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tech-tag {
+    background: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border: 2px solid var(--text-color);
+    border-radius: 0;
+    /* Brutalismo não usa cantos arredondados */
+}
+
+/* ==========================================
+   CONTATO (Formulário estilo Bloco de Notas)
+   ========================================== */
+#contato {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-top: var(--border-stroke);
+    border-bottom: var(--border-stroke);
+    padding: 4rem 0;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+}
+
+.contact-layout h2 {
+    color: var(--text-color);
+}
+
+.contact-form {
+    background-color: #ffffff;
+    border: var(--border-stroke);
+    box-shadow: var(--neo-shadow);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 800;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 1rem;
+    border: var(--border-stroke);
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--text-color);
+    outline: none;
+    background-color: var(--bg-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background-color: #ffffff;
+    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: var(--text-color);
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: var(--border-stroke);
+    box-shadow: var(--neo-shadow);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.submit-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: var(--neo-shadow-hover);
+}
+
+/* ==========================================
+   FOOTER (Rodapé simples e forte)
+   ========================================== */
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.copyright {
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 2px;
+}
+
+.social-link:hover {
+    color: var(--primary);
+}
+
+/* ==========================================
+   RESPONSIVIDADE (Ajustes para celular)
+   ========================================== */
+@media (max-width: 768px) {
+
+    .hero-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
